@@ -3,7 +3,7 @@ const apiURL = process.env.REACT_APP_API_URL;
 const keyAPI=process.env.REACT_APP_API_KEY;
 const clientID=process.env.REACT_APP_CLIENT_ID;
 const clientSECRET=process.env.REACT_APP_CLIENT_SECRET;
-console.log(keyAPI,clientID,clientSECRET)
+
 
 export const getTbcToken = async () => {
   
@@ -23,8 +23,7 @@ export const getTbcToken = async () => {
     })
   }
   try {
-    console.log(options.body)
-    console.log(options.headers)
+    
     // let res = await axios.post(`https://api.tbcbank.ge/v1/tpay/access-token`,options);
     let res = await axios.post(`https://api.tbcbank.ge/v1/tpay/access-token`,options);
     return res.access_token;
@@ -66,7 +65,7 @@ export const getPaymentProcess = async () => {
     let token=await getTbcToken();
 
     
-console.log(token)
+
     // let res = await axios.post(`${apiURL}/api/braintree/payment`, );
     // return res.data;
   } catch (error) {

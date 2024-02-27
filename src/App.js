@@ -33,7 +33,7 @@ const options = {
 
 function App() {
   const [data, dispatch] = useReducer(layoutReducer, layoutState);
-  console.log(data)
+  
   // useEffect(()=>{
   //   fetch('https://api.tbcbank.ge/v1/tpay/access-token', options)
   //   .then(response => response.json())
