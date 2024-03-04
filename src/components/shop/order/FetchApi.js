@@ -10,7 +10,8 @@ export const getTbcToken = async () => {
   const options = {
     method: 'POST',
     headers: {
-      Accept: 'application/json',
+      
+      Accept: '/',
       apikey: `${keyAPI}`,
       'Content-Type': 'application/x-www-form-urlencoded',
     
@@ -23,7 +24,7 @@ export const getTbcToken = async () => {
     })
   }
   try {
-    
+  
     // let res = await axios.post(`https://api.tbcbank.ge/v1/tpay/access-token`,options);
     let res = await axios.post(`https://api.tbcbank.ge/v1/tpay/access-token`,options);
     return res.access_token;
@@ -63,7 +64,7 @@ export const getPaymentProcess = async () => {
 
   try {
     let token=await getTbcToken();
-
+  let createPayment=await createPayment(token)
     
 
     // let res = await axios.post(`${apiURL}/api/braintree/payment`, );

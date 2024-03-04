@@ -31,7 +31,7 @@ const EditCategoryModal = (props) => {
     dispatch({ type: "loading", payload: true });
     let edit = await editCategory(cId, des, status);
     if (edit.error) {
-      console.log(edit.error);
+     
       dispatch({ type: "loading", payload: false });
     } else if (edit.success) {
       console.log(edit.success);
