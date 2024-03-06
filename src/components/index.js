@@ -18,6 +18,8 @@ import Verify from "./shop/layout/Verify";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ResetPassword from "./shop/auth/ResetPassword";
 import About from "./shop/contact/About";
+import Rule from "./shop/rules/rules";
+
 /* Routing All page will be here */
 const Routes = (props) => {
   return (
@@ -32,6 +34,7 @@ const Routes = (props) => {
           component={ResetPassword}
         />
         <Route exact path="/about" component={About} />
+        <Route exact path="/rules" component={Rule} />
      
         <Route exact path="/wish-list" component={WishList} />
         <Route exact path="/products/:id" component={ProductDetails} />

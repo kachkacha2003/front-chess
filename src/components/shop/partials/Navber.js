@@ -47,6 +47,12 @@ const Navber = (props) => {
             >
              ჩვენს შესახებ
             </span>
+            <span
+              className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
+              onClick={(e) => history.push("/rules")}
+            >
+            წესები და პირობები
+            </span>
              
           
           </div>
@@ -69,7 +75,7 @@ const Navber = (props) => {
             <span
               onClick={(e) => history.push("/")}
               style={{ letterSpacing: "0.10rem" }}
-              className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl max-[340px]:text-xl cursor-pointer px-2 "
+              className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl max-[450px]:text-xl cursor-pointer px-2 "
             >
              ChessStore
             </span>
@@ -373,6 +379,12 @@ const Navber = (props) => {
               onClick={(e) => history.push("/about")}
             >
              ჩვენს შესახებ
+            </span>
+            <span
+              className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
+              onClick={(e) => history.push("/rules")}
+            >
+            წესები და პირობები
             </span>
 
            

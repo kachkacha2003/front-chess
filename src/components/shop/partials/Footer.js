@@ -21,7 +21,10 @@ const Footer = (props) => {
         </Link>
         <ul className="flex flex-wrap items-center sm:text-base text-sm md:text-lg sm:mb-0 text-gray-400">
             <li className="cursor-pointer" onClick={(e) => history.push("/about")}>
-                <div className="mr-4 hover:underline md:mr-6 ">About</div>
+                <div className="mr-4 hover:underline md:mr-6 ">ჩვენს შესახებ</div>
+            </li>
+            <li className="cursor-pointer" onClick={(e) => history.push("/rules")}>
+                <div className="mr-4 hover:underline md:mr-6 ">წესები და პირობები</div>
             </li>
            
         </ul>
