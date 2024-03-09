@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ResetPassword from "./shop/auth/ResetPassword";
 import About from "./shop/contact/About";
 import Rule from "./shop/rules/rules";
+import Success from "./shop/productDetails/Success";
 
 /* Routing All page will be here */
 const Routes = (props) => {
@@ -33,6 +34,7 @@ const Routes = (props) => {
           path="/password-reset/:id/:token"
           component={ResetPassword}
         />
+        <Route exact path="/success" component={Success} />
         <Route exact path="/about" component={About} />
         <Route exact path="/rules" component={Rule} />
      

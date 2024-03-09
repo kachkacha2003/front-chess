@@ -1,71 +1,43 @@
 import axios from "axios";
 const apiURL = process.env.REACT_APP_API_URL;
-const keyAPI=process.env.REACT_APP_API_KEY;
-const clientID=process.env.REACT_APP_CLIENT_ID;
-const clientSECRET=process.env.REACT_APP_CLIENT_SECRET;
+const keyAPI = process.env.REACT_APP_API_KEY;
+const clientID = process.env.REACT_APP_CLIENT_ID;
+const clientSECRET = process.env.REACT_APP_CLIENT_SECRET;
 
 
-export const getTbcToken = async () => {
-  
+export const getPayment = async (totalCost) => {
+
   const options = {
-    method: 'POST',
+    params: { totalCost },
+    method: 'GET',
     headers: {
-      
+
       Accept: '/',
-      apikey: `${keyAPI}`,
-      'Content-Type': 'application/x-www-form-urlencoded',
-    
+      'Content-Type': 'application/json',
+
 
     },
-    body: new URLSearchParams({
-        'client_Id': `${clientID}`,
-        'client_secret': `${clientSECRET}`
-        
-    })
+
   }
   try {
-  
+
     // let res = await axios.post(`https://api.tbcbank.ge/v1/tpay/access-token`,options);
-    let res = await axios.post(`https://api.tbcbank.ge/v1/tpay/access-token`,options);
-    return res.access_token;
+    let res = await axios.get(`https://fluoridated-checker-spade.glitch.me/payment`, options);
+  
+    return res.data.data.links;
   } catch (error) {
     console.log(error);
   }
 };
-export const createPayment = async (token) => {
-  
-  const options = {
-    method: 'POST',
-    headers: {
-      accept: 'application/json',
-      apikey:  `${keyAPI}`,
-      'content-type': 'application/json',
-      authorization: `Bearer ${token}`
-    },
-    body: JSON.stringify({
-      amount: {currency: 'GEL', total: 1, subtotal: 0, tax: 0, shipping: 0},
-      returnurl: 'https://test.ge/returnurl',
-      extra: 'GE49TB7410945064300050',
-      expirationMinutes: 12,
-      methods: [5, 7],
-      callbackUrl: 'https://test.ge/callback',
-      language: 'KA',
-      merchantPaymentId: `${clientID}`
-    })
-  };
-  
-  fetch('https://api.tbcbank.ge/v1/tpay/payments', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-};
 
-export const getPaymentProcess = async () => {
 
+export const getPaymentProcess = async (totalCost) => {
+console.log(totalCost)
   try {
-    let token=await getTbcToken();
-  let createPayment=await createPayment(token)
-    
+    let token = await getPayment(totalCost);
+    return token;
+  
+
 
     // let res = await axios.post(`${apiURL}/api/braintree/payment`, );
     // return res.data;
