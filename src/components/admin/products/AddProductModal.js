@@ -85,7 +85,7 @@ const AddProductDetail = ({ categories }) => {
         setPImage([fData.pImages1]);
       }
     } else {
-      console.log("upload image");
+      
     }
   };
   function setPImage(value) {
@@ -102,7 +102,7 @@ const AddProductDetail = ({ categories }) => {
     e.target.reset();
     myDivRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    if (fData.pImages === []) {
+    if (fData.pImages.length===0) {
       setFdata({ ...fData, error: "Please add at least 1 image" });
       setTimeout(() => {
         setFdata({ ...fData, error: false });
@@ -158,7 +158,7 @@ const AddProductDetail = ({ categories }) => {
         }, 2000);
       }
     } catch (error) {
-      console.log(error);
+      
     }
   };
   return (

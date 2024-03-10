@@ -50,7 +50,7 @@ const Login = (props) => {
         window.location.href = "/";
       }
     } catch (error) {
-      console.log(error);
+      
     }
   };
   const handleForgotPassword = async (e) => {
@@ -80,7 +80,7 @@ const Login = (props) => {
         setloading(false);
       }
     } catch (err) {
-      console.log(err);
+     
       setError("An error occured");
       setTimeout(() => {
         setError(false);

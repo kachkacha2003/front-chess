@@ -46,7 +46,7 @@ const AllCategory = (props) => {
         errorMessage.style.display = "none";
       }, 5000);
     } else if (deleteC.success) {
-      console.log(deleteC.success);
+     
       fetchData();
     }
   };

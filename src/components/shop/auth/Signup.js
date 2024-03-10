@@ -65,7 +65,7 @@ const Signup = (props) => {
         });
       }
     } catch (error) {
-      console.log(error);
+      
     }
   };
 

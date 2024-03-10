@@ -101,7 +101,7 @@ const Slider = (props) => {
           </>
         ) : null}
       </div>
-      <OrderSuccessMessage />
+     
     </Fragment>
   );
 };

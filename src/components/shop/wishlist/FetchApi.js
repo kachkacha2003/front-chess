@@ -9,6 +9,6 @@ export const wishListProducts = async () => {
     });
     return res.data;
   } catch (error) {
-    console.log(error);
+   
   }
 };

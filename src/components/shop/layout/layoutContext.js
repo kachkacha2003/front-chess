@@ -9,6 +9,14 @@ export const layoutState = {
   cartTotalCost: null,
   orderSuccess: false,
   loading: false,
+  state:{
+    address: "",
+    phone: "",
+    error: false,
+    success: false,
+    clientToken: null,
+    instance: {},
+  }
 };
 
 export const layoutReducer = (state, action) => {
@@ -59,6 +67,11 @@ export const layoutReducer = (state, action) => {
         orderSuccess: action.payload,
       };
     case "loading":
+      return {
+        ...state,
+        loading: action.payload,
+      };
+    case "state":
       return {
         ...state,
         loading: action.payload,

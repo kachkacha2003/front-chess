@@ -136,7 +136,7 @@ const EditProductModal = (props) => {
         setPImage([editformData.pImages1]);
       }
     } else {
-      console.log("upload image");
+   
     }
     setTimeout(() => {
       setEditformdata((prevState) => ({
@@ -182,7 +182,7 @@ const EditProductModal = (props) => {
         }, 2000);
       }
     } catch (error) {
-      console.log(error);
+      
     }
   };
 

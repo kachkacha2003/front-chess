@@ -34,7 +34,7 @@ const EditCategoryModal = (props) => {
      
       dispatch({ type: "loading", payload: false });
     } else if (edit.success) {
-      console.log(edit.success);
+    
       dispatch({ type: "editCategoryModalClose" });
       setTimeout(() => {
         fetchData();

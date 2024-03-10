@@ -9,18 +9,11 @@ import { fetchData, pay } from "./Action";
 
 
 
-export const CheckoutComponent = (props) => {
+export const CheckoutComponent = ({state,setState}) => {
   const history = useHistory();
   const { data, dispatch } = useContext(LayoutContext);
-console.log(data)
-  const [state, setState] = useState({
-    address: "",
-    phone: "",
-    error: false,
-    success: false,
-    clientToken: null,
-    instance: {},
-  });
+
+ 
 
   useEffect(() => {
     fetchData(cartListProduct, dispatch);

@@ -3,9 +3,10 @@ import Layout from "../layout";
 import { CheckoutComponent } from "./CheckoutProducts";
 
 const CheckoutPage = (props) => {
+
   return (
     <Fragment>
-      <Layout children={<CheckoutComponent />} />
+      <Layout children={<CheckoutComponent state={props.state} setState={props.setState}/>} />
     </Fragment>
   );
 };

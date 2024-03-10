@@ -23,7 +23,7 @@ const CategoryList = () => {
         setCategories(responseData.Categories);
       }
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -101,7 +101,7 @@ const Search = () => {
         }
       }, 700);
     } catch (error) {
-      console.log(error);
+      
     }
   };
 

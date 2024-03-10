@@ -1,20 +1,24 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import { LayoutContext } from "../layout";
 
 const OrderSuccessMessage = (props) => {
   const { data, dispatch } = useContext(LayoutContext);
+  const [remove,setRemove]=useState(false);
   return (
     <Fragment>
       <div
         className={`${
-          data.orderSuccess ? "" : "hidden"
+          localStorage.getItem("item") ? "" : "hidden"
         } fixed bottom-0 flex justify-between items-center z-30 w-full bg-gray-800 text-white text-lg py-8 md:py-16 md:text-xl px-4 text-center`}
       >
         <span className="w-10/12 md:w-full">
           Your Order in process. Wait  to deliver.
         </span>
         <span
-          onClick={(e) => dispatch({ type: "orderSuccess", payload: false })}
+          onClick={(e) => {
+            localStorage.removeItem("item");
+            setRemove(true);
+          }}
           className="hover:bg-gray-400 hover:text-gray-800 p-2 rounded-full cursor-pointer"
         >
           <svg

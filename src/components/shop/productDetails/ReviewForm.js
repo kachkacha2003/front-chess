@@ -33,10 +33,10 @@ const ReviewForm = (props) => {
         });
       }
       if (responseData.error) {
-        console.log(responseData.error);
+        
       }
     } catch (error) {
-      console.log(error);
+     
     }
   };
 

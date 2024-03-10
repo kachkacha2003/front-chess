@@ -11,7 +11,7 @@ export const fetchData = async (cartListProduct, dispatch) => {
       }, 1000);
     }
   } catch (error) {
-    console.log(error);
+    
   }
 };
 
@@ -32,23 +32,27 @@ export const pay = async (
     setState({ ...state, error: "Please provide your phone number" });
   } else {
     let cost=totalCost();
-    console.log(cost)
-      
+    
+   
+     localStorage.setItem("adress",state.address);
+     localStorage.setItem("number",state.phone);
+
         dispatch({ type: "loading", payload: true });
        
         
         getPaymentProcess(cost)
           .then(async (res) => {
+            localStorage.setItem("payId",res.payId);
             if (res) {
-              console.log(res)
-              window.location.href = res[1].uri;
+             
+              window.location.href = res.links[1].uri;
               
             }
           })
          
     
       .catch((error) => {
-        console.log(error);
+      
         setState({ ...state, error: error.message });
       });
   }

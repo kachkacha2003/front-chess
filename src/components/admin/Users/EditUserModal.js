@@ -84,10 +84,10 @@ const EditUserModal = (props) => {
     }
     let edit = await editUser(fData);
     if (edit.error) {
-      console.log(edit.error);
+      
       dispatch({ type: "loading", payload: false });
     } else if (edit.success) {
-      console.log(edit.success);
+    
       setTimeout(() => {
         fetchData();
         // dispatch({ type: "editUserModalClose" })

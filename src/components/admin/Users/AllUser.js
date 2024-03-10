@@ -26,7 +26,7 @@ const AllUser = (props) => {
         });
       }
     } catch (error) {
-      console.log(error);
+      
       alert("Error occurred while fetching data!");
     }
     dispatch({ type: "loading", payload: false });
@@ -49,7 +49,7 @@ const AllUser = (props) => {
         errorMessage.style.display = "none";
       }, 5000);
     } else if (deleteC.success) {
-      console.log(deleteC.success);
+      
       fetchData();
     }
   };

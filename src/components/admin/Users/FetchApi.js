@@ -6,7 +6,7 @@ export const getAllUser = async () => {
     let res = await axios.get(`${apiURL}api/user/all-user`);
     return res.data;
   } catch (error) {
-    console.log(error);
+    
   }
 };
 export const editUser = async ({
@@ -22,7 +22,7 @@ export const editUser = async ({
     let res = await axios.post(`${apiURL}api/user/edit-userAdmin`, data);
     return res.data;
   } catch (error) {
-    console.log(error);
+    
   }
 };
 export const signupReq = async ({
@@ -38,7 +38,7 @@ export const signupReq = async ({
     let res = await axios.post(`${apiURL}/api/signupAdmin`, data);
     return res.data;
   } catch (error) {
-    console.log(error);
+    
   }
 };
 
@@ -49,6 +49,6 @@ export const deleteUser = async (oId) => {
     let res = await axios.post(`${apiURL}/api/user/delete-userAdmin`, { oId });
     return res.data;
   } catch (error) {
-    console.log(error);
+   
   }
 };

@@ -34,7 +34,7 @@ export const deleteReview = async (
       fetchData();
     }
   } catch (error) {
-    console.log(error);
+    
   }
 };
 
@@ -60,6 +60,6 @@ export const addReview = async (fData, setFdata, fetchData) => {
       fetchData();
     }
   } catch (error) {
-    console.log(error);
+   
   }
 };

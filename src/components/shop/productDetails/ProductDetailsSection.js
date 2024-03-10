@@ -50,11 +50,11 @@ const ProductDetailsSection = (props) => {
           layoutDispatch({ type: "inCart", payload: cartList() }); // This function change cart in cart state
         }
         if (responseData.error) {
-          console.log(responseData.error);
+         
         }
       }, 500);
     } catch (error) {
-      console.log(error);
+      
     }
     fetchCartProduct(); // Updating cart total
   };
@@ -66,7 +66,7 @@ const ProductDetailsSection = (props) => {
         layoutDispatch({ type: "cartProduct", payload: responseData.Products }); // Layout context Cartproduct fetch and dispatch
       }
     } catch (error) {
-      console.log(error);
+      
     }
   };
 

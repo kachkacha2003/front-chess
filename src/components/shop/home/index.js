@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import ProductCategory from "./ProductCategory";
 import { homeState, homeReducer } from "./HomeContext";
 import SingleProduct from "./SingleProduct";
+import OrderSuccessMessage from "./OrderSuccessMessage";
 
 export const HomeContext = createContext();
 
@@ -19,6 +20,7 @@ const HomeComponent = () => {
       <section>
         <SingleProduct />
       </section>
+      <OrderSuccessMessage/>
     </Fragment>
   );
 };

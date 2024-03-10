@@ -6,7 +6,7 @@ export const getAllProduct = async () => {
     let res = await axios.get(`${apiURL}api/product/all-product`);
     return res.data;
   } catch (error) {
-    console.log(error);
+    
   }
 };
 
@@ -38,7 +38,7 @@ export const createProduct = async ({
     let res = await axios.post(`${apiURL}api/product/add-product`, formData);
     return res.data;
   } catch (error) {
-    console.log(error);
+   
   }
 };
 
@@ -62,7 +62,7 @@ export const editProduct = async (product) => {
     let res = await axios.post(`${apiURL}api/product/edit-product`, formData);
     return res.data;
   } catch (error) {
-    console.log(error);
+   
   }
 };
 
@@ -71,7 +71,7 @@ export const deleteProduct = async (pId) => {
     let res = await axios.post(`${apiURL}api/product/delete-product`, { pId });
     return res.data;
   } catch (error) {
-    console.log(error);
+    
   }
 };
 
@@ -82,7 +82,7 @@ export const productByCategory = async (catId) => {
     });
     return res.data;
   } catch (error) {
-    console.log(error);
+   
   }
 };
 
@@ -93,6 +93,6 @@ export const productByPrice = async (price) => {
     });
     return res.data;
   } catch (error) {
-    console.log(error);
+   
   }
 };

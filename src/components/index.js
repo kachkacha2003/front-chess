@@ -19,10 +19,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ResetPassword from "./shop/auth/ResetPassword";
 import About from "./shop/contact/About";
 import Rule from "./shop/rules/rules";
-import Success from "./shop/productDetails/Success";
+// import Succes from "./shop/order/Success";
+import Succes from "./shop/order/Success";
+
 
 /* Routing All page will be here */
 const Routes = (props) => {
+  
   return (
     <Router>
       <Switch>
@@ -34,7 +37,9 @@ const Routes = (props) => {
           path="/password-reset/:id/:token"
           component={ResetPassword}
         />
-        <Route exact path="/success" component={Success} />
+        <Route exact path="/success" render={(routeProps) => (
+    <Succes {...routeProps} state={props.state} setState={props.setState}/>
+  )} />
         <Route exact path="/about" component={About} />
         <Route exact path="/rules" component={Rule} />
      
@@ -48,7 +53,10 @@ const Routes = (props) => {
         <CartProtectedRoute
           exact={true}
           path="/checkout"
-          component={CheckoutPage}
+          component={CheckoutPage }
+          state={props.state}
+          setState={props.setState}
+         
         />
         {/* Shop & Public Routes End */}
 
