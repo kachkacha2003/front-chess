@@ -68,7 +68,7 @@ const Login = (props) => {
         }, 5000);
         setloading(false);
         if (
-          response.data === "Password reset link sent to your email account"
+          response.data === "პაროლის აღდგენის ბმული გაიგზავნა თქვენს ელ.ფოსტის ანგარიშზე"
         ) {
           setEmail("");
         }
@@ -197,7 +197,7 @@ const Login = (props) => {
           {error ? (
             <div
               className={
-                error === "Password reset link sent to your email account"
+                error === "პაროლის აღდგენის ბმული გაიგზავნა თქვენს ელ.ფოსტის ანგარიშზე"
                   ? "bg-green-300 py-2 px-4 rounded text-center"
                   : "bg-red-200 py-2 px-4 rounded text-center"
               }
