@@ -40,7 +40,7 @@ const RatingReview = () => {
         <ReviewForm />
       ) : (
         <div className="mb-12 md:mx-16 lg:mx-20 xl:mx-24 bg-red-200 px-4 py-2 rounded ">
-          You need to login in for review
+          შეფასებისთვის საჭიროა ავტორიზაცია
         </div>
       )}
     </Fragment>

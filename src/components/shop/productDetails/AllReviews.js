@@ -145,7 +145,7 @@ const AllReviews = (props) => {
             );
           })
         ) : (
-          <div>No Review found</div>
+          <div>შეფასება არ მოიძებნა</div>
         )}
       </div>
     </Fragment>

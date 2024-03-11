@@ -37,7 +37,7 @@ const Product = () => {
   if (loading) {
     return (
       <div className="my-32 text-2xl text-center">
-        No product found in wishList
+        პროდუქტი ვერ მოიძებნა
       </div>
     );
   }
