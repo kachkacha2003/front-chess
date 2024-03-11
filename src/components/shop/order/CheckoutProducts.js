@@ -101,7 +101,7 @@ export const CheckoutComponent = ({state,setState}) => {
                       type="number"
                       id="phone"
                       className="border px-4 py-2"
-                      placeholder="+880"
+                      placeholder="შეიყვანეთ ნომერი.."
                     />
                   </div>
                   
