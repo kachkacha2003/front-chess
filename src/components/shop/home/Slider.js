@@ -95,7 +95,7 @@ const Slider = (props) => {
                 style={{ background: "#303031" }}
                 className="cursor-pointer box-border text-2xl text-white px-4 py-2 rounded-lg"
               >
-                Shop Now
+                ყიდვა
               </p>
             </div>
           </>

@@ -154,7 +154,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>My Orders</span>
+                            <span>ჩემი შეკვეთები</span>
                           </span>
                           <span
                             onClick={(e) => history.push("/user/profile")}
@@ -176,7 +176,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>My Account</span>
+                            <span>აქაუნთი</span>
                           </span>
                           <span
                             onClick={(e) => history.push("/wish-list")}
@@ -198,7 +198,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>My Wishlist</span>
+                            <span>სასურველი პროდუქტი</span>
                           </span>
                           <span
                             onClick={(e) => history.push("/user/setting")}
@@ -226,7 +226,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Setting</span>
+                            <span>პარამეტრები</span>
                           </span>
                           <span
                             onClick={(e) => logout()}
@@ -248,7 +248,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Logout</span>
+                            <span>გასვლა</span>
                           </span>
                         </li>
                       </Fragment>
@@ -281,7 +281,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Admin Panel</span>
+                            <span>ადმინ პანელი</span>
                           </span>
                           <span
                             onClick={(e) => logout()}
@@ -303,7 +303,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Logout</span>
+                            <span>გასვლა</span>
                           </span>
                         </li>
                       </Fragment>

@@ -121,7 +121,7 @@ const FResetPassword = (props) => {
       {ismessage === "User password can be modified" ? (
         <>
         <div className="flex flex-col items-center justify-center mt-40 my-10">
-        <h2 className="text-2xl sm:text-3xl mb-2 font-semibold">Reset Password</h2>
+        <h2 className="text-2xl sm:text-3xl mb-2 font-semibold">პაროლის აღდგენა</h2>
 
           {message ? (
             <div
@@ -139,7 +139,7 @@ const FResetPassword = (props) => {
           <form className="flex flex-col space-y-4 lg:w-[500px] sm:w-[300px]">
             <div className="flex flex-col">
               <label htmlFor="password" className="text-sm text-gray-600">
-                New Password:
+                ახალი პაროლი:
               </label>
               <input
                 type="password"
@@ -152,7 +152,7 @@ const FResetPassword = (props) => {
             </div>
             <div className="flex flex-col">
               <label htmlFor="cpassword" className="text-sm text-gray-600">
-                Confirm Password:
+                დაადასტურე პაროლი:
               </label>
               <input
                 type="password"
@@ -184,14 +184,14 @@ const FResetPassword = (props) => {
                     fill="currentFill"
                   />
                 </svg>
-                Processing...
+                პროცესი...
               </div>
             ) : (
               <div
                 onClick={(e) => handleSubmit(e)}
                 className="font-medium px-4 py-2 text-white text-center cursor-pointer rounded-md bg-[#303031] hover:bg-gray-900"
               >
-                Reset password
+                პაროლის აღდგენა
               </div>
             )}
           </form>

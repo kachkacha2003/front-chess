@@ -67,9 +67,9 @@ const Product = () => {
                     ${product.pPrice}
                   </div>
                   {product.pQuantity > 0 && product.pStatus === "Active" ? (
-                    <div className="text-green-500 my-1 md:my-0">In Stock</div>
+                    <div className="text-green-500 my-1 md:my-0">საწყობშია</div>
                   ) : (
-                    <div className="text-red-500 my-1 md:my-0">Out Stock</div>
+                    <div className="text-red-500 my-1 md:my-0">საწყობში ვერ იძებნება</div>
                   )}
                   {product.pQuantity > 0 && product.pStatus === "Active" ? (
                     <div
@@ -77,14 +77,14 @@ const Product = () => {
                       onClick={(e) => history.push(`/products/${product._id}`)}
                       className="inline-block px-4 py-2 text-white text-xs md:text-base text-center cursor-pointer hover:opacity-75"
                     >
-                      View
+                      დაწვრილებით
                     </div>
                   ) : (
                     <div
                       style={{ background: "#303031" }}
                       className="inline-block px-4 py-2 text-white text-xs md:text-base text-center cursor-pointer hover:opacity-75"
                     >
-                      View
+                      დაწვრილებით
                     </div>
                   )}
                 </div>
@@ -107,7 +107,7 @@ const Product = () => {
             );
           })
         ) : (
-          <div>No product found in wishList</div>
+          <div>პროდუქტი ვერ მოიძებნა</div>
         )}
       </div>
     </Fragment>
@@ -118,7 +118,7 @@ const SingleWishProduct = (props) => {
   return (
     <Fragment>
       <section className="mx-4 mt-24 md:mx-12 md:mt-32 lg:mt-24">
-        <div className="text-2xl mx-2 mb-6">Wishlist</div>
+        <div className="text-2xl mx-2 mb-6">სასურველი პროდუქტები</div>
         {/* Product List */}
         <Product />
       </section>

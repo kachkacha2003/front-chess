@@ -39,14 +39,14 @@ export const CheckoutComponent = ({state,setState}) => {
             d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
           ></path>
         </svg>
-        Please wait untill finish
+        გთხოვთ დაელოდოთ დასრულებას
       </div>
     );
   }
   return (
     <Fragment>
       <section className="mx-4 mt-20 lg:mx-12 lg:mt-32 ">
-        <div className="text-2xl mx-2">Order</div>
+        <div className="text-2xl mx-2">შეკვეთა</div>
         {/* Product List */}
         <div className="flex flex-col lg:flex lg:space-x-2 lg:flex-row">
           <div className="lg:w-1/2">
@@ -68,7 +68,7 @@ export const CheckoutComponent = ({state,setState}) => {
                   )}
                   <div className="flex flex-col py-2">
                     <label htmlFor="address" className="pb-2">
-                      Dalivery Address
+                     მიწოდების მისამართი
                     </label>
                     <input
                       value={state.address}
@@ -87,7 +87,7 @@ export const CheckoutComponent = ({state,setState}) => {
                   </div>
                   <div className="flex flex-col py-2 mb-2">
                     <label htmlFor="phone" className="pb-2">
-                      Phone
+                      ტელეფონის ნომერი
                     </label>
                     <input
                       value={state.phone}
@@ -120,7 +120,7 @@ export const CheckoutComponent = ({state,setState}) => {
                     className="w-full px-4 py-2 text-center text-white font-semibold cursor-pointer"
                     style={{ background: "#303031" }}
                   >
-                    Pay now
+                   გადახდა
                   </div>
                 </div>
               </Fragment>
@@ -156,20 +156,20 @@ const CheckoutProducts = ({ products }) => {
                     {product.pName}
                   </div>
                   <div className="lg:ml-6 font-semibold text-gray-600 text-sm">
-                    Price : {product.pPrice}
+                    ფასი : {product.pPrice}
                   </div>
                   <div className="lg:ml-6 font-semibold text-gray-600 text-sm">
-                    Quantitiy : {quantity(product._id)}
+                    რაოდენობა : {quantity(product._id)}
                   </div>
                   <div className="font-semibold text-gray-600 text-sm">
-                    Subtotal : {subTotal(product._id, product.pPrice)} 
+                    ჯამში : {subTotal(product._id, product.pPrice)} 
                   </div>
                 </div>
               </div>
             );
           })
         ) : (
-          <div>No product found for checkout</div>
+          <div>შეკვეთისთვის პროდუქტი ვერ მოიძებნა</div>
         )}
       </div>
     </Fragment>

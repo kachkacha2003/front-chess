@@ -90,7 +90,7 @@ const ProductDetailsSection = (props) => {
       </div>
     );
   } else if (!sProduct) {
-    return <div>No product</div>;
+    return <div>პროდუქტი ვერ მოიძებნა</div>;
   }
   return (
     <Fragment>
@@ -283,7 +283,7 @@ const ProductDetailsSection = (props) => {
                     quantitiy === sProduct.pQuantity && "text-red-500"
                   }`}
                 >
-                  Quantity
+                  რაოდენობა
                 </div>
                 {/* Quantity Button */}
                 {sProduct.pQuantity !== 0 ? (
@@ -420,7 +420,7 @@ const ProductDetailsSection = (props) => {
                       style={{ background: "#303031" }}
                       className={`px-4 py-2 text-white text-center cursor-not-allowed uppercase opacity-75`}
                     >
-                      In cart
+                      კალათაში
                     </div>
                   ) : (
                     <div
@@ -439,7 +439,7 @@ const ProductDetailsSection = (props) => {
                       style={{ background: "#303031" }}
                       className={`px-4 py-2 text-white text-center cursor-pointer uppercase select-none	 `}
                     >
-                      Add to cart
+                      კალათაში დამატება
                     </div>
                   )}
                 </Fragment>
@@ -451,7 +451,7 @@ const ProductDetailsSection = (props) => {
                       style={{ background: "#303031" }}
                       className={`px-4 py-2 text-white text-center cursor-not-allowed uppercase opacity-75`}
                     >
-                      In cart
+                      კალათაშია
                     </div>
                   ) : (
                     <div
@@ -459,7 +459,7 @@ const ProductDetailsSection = (props) => {
                       disabled={true}
                       className="px-4 py-2 text-white opacity-50 cursor-not-allowed text-center uppercase"
                     >
-                      Out of stock
+                     არ არის საწყობში
                     </div>
                   )}
                 </Fragment>

@@ -85,7 +85,7 @@ const FVerify = (props) => {
             </svg>
           </span>
           <span className="text-center text-[rgb(0_107_12)] mx-6 md:text-3xl sm:text-2xl text-lg lg:text-4xl font-bold tracking-widest mt-6">
-            Email has been verified successfully
+          ელფოსტა წარმატებით დადასტურდა
           </span>
         </div>
       ) : (

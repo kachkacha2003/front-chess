@@ -8,11 +8,11 @@ const TableHeader = () => {
     <Fragment>
       <thead>
         <tr>
-          <th className="px-4 py-2 border">Products</th>
-          <th className="px-4 py-2 border">Status</th>
-          <th className="px-4 py-2 border">Total</th>
-          <th className="px-4 py-2 border">Phone</th>
-          <th className="px-4 py-2 border">Address</th>
+          <th className="px-4 py-2 border">პროდუქტები</th>
+          <th className="px-4 py-2 border">სტატუსი</th>
+          <th className="px-4 py-2 border">ჯამი</th>
+          <th className="px-4 py-2 border">ტელეფონი</th>
+          <th className="px-4 py-2 border">მისამართი</th>
           <th className="px-4 py-2 border">Transaction Id</th>
           <th className="px-4 py-2 border">Checkout</th>
           <th className="px-4 py-2 border">Processing</th>
@@ -123,7 +123,7 @@ const OrdersComponent = () => {
       <div className="flex flex-col w-full my-4 md:my-0 md:w-9/12 md:px-8">
         <div className="border">
           <div className="py-4 px-4 text-lg font-semibold border-t-2 border-yellow-700">
-            Orders
+            შეკვეთები
           </div>
           <hr />
           <div className="overflow-auto bg-white shadow-lg p-4">
@@ -140,14 +140,14 @@ const OrdersComponent = () => {
                       colSpan="8"
                       className="text-xl text-center font-semibold py-8"
                     >
-                      No order found
+                     შეკვეთა ვერ მოიძებნა
                     </td>
                   </tr>
                 )}
               </tbody>
             </table>
             <div className="text-sm text-gray-600 mt-2">
-              Total {orders && orders.length} order found
+             ჯამში {orders && orders.length} შეკვეთა
             </div>
           </div>
         </div>

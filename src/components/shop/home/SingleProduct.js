@@ -180,7 +180,7 @@ const SingleProduct = (props) => {
         })
       ) : (
         <div className="col-span-2 md:col-span-3 lg:col-span-4 flex items-center justify-center py-24 text-2xl">
-          No product found
+          პროდუქტი არ მოიძებნა
         </div>
       )}
       </div>
@@ -192,7 +192,7 @@ const SingleProduct = (props) => {
           disabled={currentPage === 1}
           className={currentPage === 1 ? 'cursor-not-allowed bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded': "cursor-pointer bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded"}
         >
-          Previous
+          უკან
         </button>
         <button
           onClick={() => setCurrentPage(currentPage + 1)}
@@ -201,7 +201,7 @@ const SingleProduct = (props) => {
           }
           className={currentPage === totalPages ? 'cursor-not-allowed bg-gray-300 ml-3 text-gray-800 font-medium py-2 px-4 rounded': "cursor-pointer bg-gray-300 ml-3 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded"} 
         >
-          Next
+          შემდეგი
         </button>
       </div>
       }

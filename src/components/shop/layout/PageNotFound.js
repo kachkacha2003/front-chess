@@ -21,7 +21,7 @@ const PageNotFoundComponent = (props) => {
         </svg>
       </span>
       <span className="text-center text-gray-700 text-4xl font-bold tracking-widest">
-        404 not found
+        გვერდი ვერ მოიძებნა
       </span>
     </div>
   );

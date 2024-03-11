@@ -20,7 +20,7 @@ const ProductCategory = (props) => {
           }`}
         >
           <span className="text-md md:text-lg hover:text-yellow-700">
-            Categories
+            კატეგორიები
           </span>
           <svg
             className="w-4 h-4 text-yellow-700"
@@ -49,7 +49,7 @@ const ProductCategory = (props) => {
               data.searchDropdown ? "text-yellow-700" : ""
             }`}
           >
-            <span className="text-md md:text-lg">Search</span>
+            <span className="text-md md:text-lg">ძებნა</span>
             <span>
               <svg
                 className="w-4 h-4 text-gray-700"

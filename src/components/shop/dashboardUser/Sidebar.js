@@ -46,7 +46,7 @@ const Sidebar = (props) => {
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            My Orders
+            ჩემი შეკვეთები
           </div>
           <hr />
           <div
@@ -57,7 +57,7 @@ const Sidebar = (props) => {
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            My Accounts
+           ჩემი პროფილი
           </div>
           <hr />
           <div
@@ -68,7 +68,7 @@ const Sidebar = (props) => {
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            Setting
+            პარამეტრები
           </div>
           <hr />
           <div
@@ -79,7 +79,7 @@ const Sidebar = (props) => {
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            Logout
+            გასვლა
           </div>
         </div>
       </div>
