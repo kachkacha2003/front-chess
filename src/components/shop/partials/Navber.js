@@ -33,7 +33,7 @@ const Navber = (props) => {
     <Fragment>
       {/* Navber Section */}
       <nav className="fixed  top-0 w-full z-20 shadow-lg lg:shadow-none bg-white">
-        <div className="m-4 md:mx-12 md:my-6 flex  sm:justify-between items-center">
+        <div className="m-4 md:mx-12 md:my-6 flex  justify-between items-center">
           <div className="hidden lg:flex  items-center text-gray-600 mt-1">
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
