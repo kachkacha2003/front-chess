@@ -68,7 +68,7 @@ const ProductDetailsSectionTwo = (props) => {
       </section>
       <div className="m-4 md:mx-8 md:my-6 flex justify-center capitalize font-light tracking-widest bg-white border-t border-b text-gray-800 px-4 py-4 space-x-4">
         <div>
-          <span>კეტეგორია :</span>
+          <span>კატეგორია :</span>
           <span className="text-sm text-gray-600">
             {" "}
             {singleProduct.pCategory ? singleProduct.pCategory.cName : ""}
