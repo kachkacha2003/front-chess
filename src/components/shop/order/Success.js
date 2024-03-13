@@ -61,6 +61,8 @@ const Success = ({state,setState}) => {
   } catch (error) {
    
   }
+      }else{
+        history.push("/")
       }
       } catch (error) {
        

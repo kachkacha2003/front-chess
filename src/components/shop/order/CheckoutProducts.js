@@ -17,7 +17,9 @@ export const CheckoutComponent = ({state,setState}) => {
 
   useEffect(() => {
     fetchData(cartListProduct, dispatch);
-   
+    localStorage.removeItem("payId")
+      localStorage.removeItem("number");
+      localStorage.removeItem("address");
 
 
   }, []);
