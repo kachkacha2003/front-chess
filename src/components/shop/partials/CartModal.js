@@ -173,7 +173,7 @@ const CartModal = () => {
                       cartModalOpen();
                     }}
                   >
-                    გადახდა ₾{data.cartTotalCost}
+                    გადახდა ₾{data.cartTotalCost-5}
                   </div>
                 ) : (
                   <div

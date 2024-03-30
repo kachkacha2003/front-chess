@@ -49,6 +49,9 @@ export const CheckoutComponent = ({state,setState}) => {
     <Fragment>
       <section className="mx-4 mt-20 lg:mx-12 lg:mt-32 ">
         <div className="text-2xl mx-2">შეკვეთა</div>
+        <div className="lg:ml-6 font-semibold text-gray-600 text-sm mt-[20px]">
+                    მიტანის სერვისის ღირებულება : 5₾
+                  </div>
         {/* Product List */}
         <div className="flex flex-col lg:flex lg:space-x-2 lg:flex-row">
           <div className="lg:w-1/2">
@@ -129,6 +132,7 @@ export const CheckoutComponent = ({state,setState}) => {
             
           </div>
         </div>
+        
       </section>
     </Fragment>
   );
@@ -145,9 +149,10 @@ const CheckoutProducts = ({ products }) => {
             return (
               <div
                 key={index}
-                className="col-span-1 m-2 lg:py-6 lg:border-t lg:border-b lg:my-2 lg:mx-0 lg:flex lg:items-center lg:justify-between"
+                className="lg:flex lg:flex-col col-span-1 m-2 lg:py-6 lg:border-t lg:border-b lg:my-2 lg:mx-0 lg:flex lg:items-center lg:justify-between"
               >
-                <div className="lg:flex lg:items-center lg:space-x-4">
+                
+                <div className="lg:flex  lg:items-center lg:space-x-4">
                   <img
                     onClick={(e) => history.push(`/products/${product._id}`)}
                     className="cursor-pointer aspect-[13/10]  sm:aspect-[15/10] lg:aspect-[1/1] lg:h-20 lg:w-20 object-cover object-center"
@@ -158,16 +163,19 @@ const CheckoutProducts = ({ products }) => {
                     {product.pName}
                   </div>
                   <div className="lg:ml-6 font-semibold text-gray-600 text-sm">
-                    ფასი : {product.pPrice}
+                    ფასი : {product.pPrice}₾
                   </div>
                   <div className="lg:ml-6 font-semibold text-gray-600 text-sm">
                     რაოდენობა : {quantity(product._id)}
                   </div>
+                 
                   <div className="font-semibold text-gray-600 text-sm">
-                    ჯამში : {subTotal(product._id, product.pPrice)} 
+                    ჯამში : {product.pPrice*quantity(product._id)}₾
                   </div>
                 </div>
+               
               </div>
+              
             );
           })
         ) : (

@@ -26,5 +26,5 @@ export const totalCost = () => {
   carts.forEach((item) => {
     totalCost += item.quantitiy * item.price;
   });
-  return parseFloat(totalCost.toFixed(2));
+  return parseFloat((totalCost+5).toFixed(2));
 };
