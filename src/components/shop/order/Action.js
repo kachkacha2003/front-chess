@@ -40,7 +40,7 @@ export const pay = async (
         dispatch({ type: "loading", payload: true });
        
         
-        getPaymentProcess(cost)
+        getPaymentProcess(cost+5)
           .then(async (res) => {
             localStorage.setItem("payId",res.payId);
             if (res) {
